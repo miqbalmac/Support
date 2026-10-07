@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Panda · Print-ready 3D models for Mac</title>
+  <meta name="description" content="3D Panda: print-ready 3D models for Mac, straight to your slicer, plus an AI Studio to make your own.">
+  <style>
+:root {
+  --green: #4caf50;
+  --green-dark: #2e7d32;
+  --green-mid: #43a047;
+  --green-soft: rgba(76, 175, 80, 0.12);
+  --green-text: #2e7d32;
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --border: #e1e4e9;
+  --text: #14161a;
+  --body: #4b5563;
+  --muted: #6b7280;
+  --shadow: 0 1px 2px rgba(20, 22, 26, 0.04), 0 8px 24px rgba(20, 22, 26, 0.06);
+  --radius: 22px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --green-soft: rgba(76, 175, 80, 0.16);
+    --green-text: #81c784;
+    --bg: #17181a;
+    --card: #1c1c1e;
+    --border: #2c2c2c;
+    --text: #ffffff;
+    --body: #b6b6b8;
+    --muted: #909091;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--green-text); text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 800; font-size: 20px; letter-spacing: -0.2px; }
+.brand:hover { text-decoration: none; }
+.mark { width: 36px; height: 36px; border-radius: 10px; background: var(--green); box-shadow: inset 0 -3px 0 var(--green-dark); display: grid; place-items: center; }
+.nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.nav a { color: var(--body); font-size: 14px; padding: 7px 12px; border-radius: 999px; }
+.nav a:hover { background: var(--card); text-decoration: none; }
+.nav a[aria-current="page"] { background: var(--green); color: #fff; }
+.pill { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.7); border: 1px solid #b4e07e; margin-bottom: 12px; color: #234d27; }
+.home-hero { border-radius: var(--radius); overflow: hidden; position: relative; margin: 8px 0 22px; min-height: 300px; background: #eef3ea url("hero.jpg") 100% 72% / auto 150% no-repeat; border: 1px solid var(--border); }
+.home-hero .inner { position: relative; padding: 40px 34px; max-width: 560px; background: linear-gradient(90deg, rgba(244, 245, 247, 0.97) 62%, rgba(244, 245, 247, 0)); min-height: 300px; }
+.home-hero h1 { margin: 0 0 8px; font-size: clamp(30px, 5vw, 44px); line-height: 1.08; letter-spacing: -0.8px; color: #14161a; }
+.home-hero p { margin: 0 0 18px; color: #4b5563; max-width: 360px; }
+.button { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: #fff; font-weight: 700; padding: 12px 20px; border-radius: 14px; box-shadow: inset 0 -3px 0 var(--green-dark); }
+.button:hover { text-decoration: none; background: var(--green-mid); }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 30px 32px; margin-bottom: 18px; }
+.card h2 { font-size: 22px; line-height: 1.3; margin: 0 0 10px; letter-spacing: -0.3px; }
+.card p { color: var(--body); margin: 0 0 12px; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 18px; }
+.feature { border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
+.feature b { display: block; margin-bottom: 4px; }
+.feature span { color: var(--muted); font-size: 14px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 18px; }
+.tile { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); padding: 20px; color: var(--text); }
+.tile:hover { border-color: var(--green); text-decoration: none; }
+.tile .icon { width: 40px; height: 40px; border-radius: 12px; background: var(--green-soft); display: grid; place-items: center; margin-bottom: 12px; }
+.tile b { display: block; font-size: 16px; margin-bottom: 2px; }
+.tile span { color: var(--muted); font-size: 14px; font-weight: 500; }
+.foot { color: var(--muted); font-size: 13px; padding: 10px 0 40px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.foot a { color: var(--muted); font-weight: 500; }
+@media (max-width: 600px) {
+  .card { padding: 22px 18px; }
+  .home-hero .inner { max-width: none; background: rgba(244, 245, 247, 0.9); }
+  .top { flex-direction: column; align-items: flex-start; }
+}
+</style>
+  <link rel="icon" href="panda.png">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="index.html">
+      <span class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"><path d="M12 2.8 20 7.4v9.2L12 21.2 4 16.6V7.4z"/><path d="M4 7.4 12 12l8-4.6M12 12v9.2"/></svg></span>
+      3D Panda
+    </a>
+    <nav class="nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <section class="home-hero">
+    <div class="inner">
+      <span class="pill">For Mac</span>
+      <h1>Print-ready 3D models.</h1>
+      <p>Find a model, download it, print it. Or make your own in AI Panda Studio.</p>
+      <a class="button" href="support.html">Get help</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>About 3D Panda</h2>
+    <p>3D Panda is a Mac app for people who love 3D printing. Every model in our catalog is checked and set up for printing, so you spend your time printing, not fixing files. Download a model and it opens straight in your slicer.</p>
+    <p>Want something one of a kind? AI Panda Studio turns a photo or an idea into a printable model, and makes keychains, badges and name plates from a logo or a word.</p>
+    <div class="features">
+      <div class="feature"><b>Print-ready models</b><span>Checked and set up to print, with new models added regularly.</span></div>
+      <div class="feature"><b>Straight to your slicer</b><span>Bambu Studio, OrcaSlicer, PrusaSlicer, Creality Print and Cura.</span></div>
+      <div class="feature"><b>AI Panda Studio</b><span>Image to 3D, Text to 3D, Logo to 3D and Text &amp; Font to 3D.</span></div>
+      <div class="feature"><b>Private by design</b><span>No account, no ads, no tracking. Your library stays on your Mac.</span></div>
+    </div>
+  </section>
+
+  <div class="tiles">
+    <a class="tile" href="privacy.html">
+      <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6z"/><path d="M12 10v4M12 7.5v.5"/></svg></span>
+      <b>Privacy Policy</b>
+      <span>No account, no ads, no tracking</span>
+    </a>
+    <a class="tile" href="terms.html">
+      <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span>
+      <b>Terms of Use</b>
+      <span>Subscriptions, models and the Studio</span>
+    </a>
+    <a class="tile" href="support.html">
+      <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19a3 3 0 0 1-3 3h-3"/></svg></span>
+      <b>Support</b>
+      <span>Questions, problems or feedback</span>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <span>© 2026 3D Panda</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></span>
+  </footer>
+</div>
+</body>
+</html>
