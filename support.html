@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support · 3D Panda</title>
+  <meta name="description" content="Get help with 3D Panda: downloads, slicers, credits, subscriptions and the AI Studio.">
+  <style>
+:root {
+  --green: #4caf50;
+  --green-dark: #2e7d32;
+  --green-mid: #43a047;
+  --green-soft: rgba(76, 175, 80, 0.12);
+  --green-text: #2e7d32;
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --border: #e1e4e9;
+  --text: #14161a;
+  --body: #4b5563;
+  --muted: #6b7280;
+  --shadow: 0 1px 2px rgba(20, 22, 26, 0.04), 0 8px 24px rgba(20, 22, 26, 0.06);
+  --radius: 22px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --green-soft: rgba(76, 175, 80, 0.16);
+    --green-text: #81c784;
+    --bg: #17181a;
+    --card: #1c1c1e;
+    --border: #2c2c2c;
+    --text: #ffffff;
+    --body: #b6b6b8;
+    --muted: #909091;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--green-text); text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 800; font-size: 20px; letter-spacing: -0.2px; }
+.brand:hover { text-decoration: none; }
+.mark { width: 36px; height: 36px; border-radius: 10px; background: var(--green); box-shadow: inset 0 -3px 0 var(--green-dark); display: grid; place-items: center; }
+.nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.nav a { color: var(--body); font-size: 14px; padding: 7px 12px; border-radius: 999px; }
+.nav a:hover { background: var(--card); text-decoration: none; }
+.nav a[aria-current="page"] { background: var(--green); color: #fff; }
+.hero { position: relative; overflow: hidden; border-radius: var(--radius); background: linear-gradient(135deg, #f3fce3 0%, #d9f5a8 100%); border: 1.5px solid #b4e07e; padding: 34px 32px; margin: 8px 0 22px; color: #234d27; }
+.hero h1 { margin: 0 0 6px; font-size: clamp(28px, 4.4vw, 40px); line-height: 1.12; letter-spacing: -0.6px; font-weight: 850; }
+.hero p { margin: 0; color: #3f6e3b; font-size: 15px; max-width: 560px; }
+.hero .panda { position: absolute; right: 18px; bottom: -14px; width: 132px; height: auto; filter: drop-shadow(0 10px 18px rgba(35, 77, 39, 0.25)); }
+.pill { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.7); border: 1px solid #b4e07e; margin-bottom: 12px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 30px 32px; margin-bottom: 18px; }
+.card h2 { font-size: 19px; line-height: 1.3; margin: 28px 0 8px; letter-spacing: -0.2px; }
+.card h2:first-child { margin-top: 0; }
+.card p { color: var(--body); margin: 0 0 12px; }
+.card strong { color: var(--text); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 18px; }
+.tile { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); padding: 20px; color: var(--text); }
+.tile:hover { border-color: var(--green); text-decoration: none; }
+.tile .icon { width: 40px; height: 40px; border-radius: 12px; background: var(--green-soft); display: grid; place-items: center; margin-bottom: 12px; }
+.tile b { display: block; font-size: 16px; margin-bottom: 2px; }
+.tile span { color: var(--muted); font-size: 14px; font-weight: 500; }
+.button { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: #fff; font-weight: 700; padding: 12px 20px; border-radius: 14px; box-shadow: inset 0 -3px 0 var(--green-dark); }
+.button:hover { text-decoration: none; background: var(--green-mid); }
+details { border-top: 1px solid var(--border); padding: 14px 0; }
+details:first-of-type { border-top: 0; padding-top: 0; }
+summary { cursor: pointer; font-weight: 700; color: var(--text); list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; float: right; color: var(--green); font-weight: 800; }
+details[open] summary::after { content: "–"; }
+details p { margin: 8px 0 0; }
+.foot { color: var(--muted); font-size: 13px; padding: 10px 0 40px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.foot a { color: var(--muted); font-weight: 500; }
+@media (max-width: 600px) {
+  .card { padding: 22px 18px; }
+  .hero { padding: 26px 20px 110px; }
+  .hero .panda { width: 104px; right: 12px; }
+  .top { flex-direction: column; align-items: flex-start; }
+}
+</style>
+  <link rel="icon" href="panda.png">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="index.html">
+      <span class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"><path d="M12 2.8 20 7.4v9.2L12 21.2 4 16.6V7.4z"/><path d="M4 7.4 12 12l8-4.6M12 12v9.2"/></svg></span>
+      3D Panda
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html" aria-current="page">Support</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <span class="pill">Help</span>
+    <h1>How can we help?</h1>
+    <p>Answers to common questions, and a real person when you need one. We usually reply within 24 hours.</p>
+    <img class="panda" src="panda.png" alt="">
+  </section>
+
+  <div class="tiles">
+    <a class="tile" href="mailto:miqbal.mac@gmail.com?subject=3D%20Panda%20support">
+      <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span>
+      <b>Email support</b>
+      <span>miqbal.mac@gmail.com</span>
+    </a>
+    <a class="tile" href="https://apps.apple.com/account/subscriptions">
+      <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></span>
+      <b>Manage subscription</b>
+      <span>Change or cancel in your Apple ID</span>
+    </a>
+    <a class="tile" href="https://reportaproblem.apple.com">
+      <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"/><path d="M12 8v5M12 16.5v.5"/></svg></span>
+      <b>Request a refund</b>
+      <span>Refunds are handled by Apple</span>
+    </a>
+  </div>
+
+  <main class="card">
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>Where do my downloaded models go?</summary>
+      <p>They're saved in your <strong>Downloads/3D Panda</strong> folder and listed in <strong>My Library</strong>. You can choose a different folder in Settings → Downloads &amp; files.</p>
+    </details>
+
+    <details>
+      <summary>How do I open a model in my slicer?</summary>
+      <p>Choose your slicer in Settings (Bambu Studio, OrcaSlicer, PrusaSlicer, Creality Print or UltiMaker Cura). After a download, press <strong>Open in slicer</strong>, or turn on "Open after downloading" to open it automatically. No slicer yet? They're all free to download.</p>
+    </details>
+
+    <details>
+      <summary>What are credits?</summary>
+      <p>Downloads and Studio tools use credits. The Free plan includes a few credits each month, and every Pro plan includes more for each billing period. Downloading a model you already downloaded this period is free. You can see your credits in the sidebar.</p>
+    </details>
+
+    <details>
+      <summary>My AI model failed. Did I lose credits?</summary>
+      <p>No. If an AI generation fails, its credits are returned automatically. Try a clearer picture of a single object, or a more detailed description.</p>
+    </details>
+
+    <details>
+      <summary>I bought Pro, but the App still shows Free.</summary>
+      <p>Open the plans screen and press <strong>Restore purchases</strong>. Make sure you're signed in to the App Store with the same Apple ID you used to buy.</p>
+    </details>
+
+    <details>
+      <summary>How do I cancel my subscription?</summary>
+      <p>Open the App Store, click your name, then <strong>Subscriptions</strong>, or go straight to <a href="https://apps.apple.com/account/subscriptions">your subscriptions</a>. Cancel at least 24 hours before renewal. Pro stays active until the end of the period you paid for.</p>
+    </details>
+
+    <details>
+      <summary>Can I sell the things I print?</summary>
+      <p>Unless a model's page says otherwise, models are for personal use. See our <a href="terms.html#models">Terms of Use</a> for details.</p>
+    </details>
+
+    <details>
+      <summary>How do I delete my data?</summary>
+      <p>Everything in My Library lives on your Mac. To remove AI Studio content and records from our servers, email us. See our <a href="privacy.html#rights">Privacy Policy</a>.</p>
+    </details>
+  </main>
+
+  <section class="card" style="text-align:center">
+    <h2 style="margin-top:0">Still need help?</h2>
+    <p>Tell us what happened, your Mac model and the 3D Panda version (Settings → top of the page).</p>
+    <a class="button" href="mailto:miqbal.mac@gmail.com?subject=3D%20Panda%20support">Email support</a>
+  </section>
+
+  <footer class="foot">
+    <span>© 2026 3D Panda</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></span>
+  </footer>
+</div>
+</body>
+</html>
